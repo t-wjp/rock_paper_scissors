@@ -5,10 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissor</title>
+    <style>
+      .rps-button {
+          margin: 5px;
+          padding: 10px 20px;
+          font-size: 16px;
+          cursor: pointer;
+      }
+      .score-container {
+          margin-top: 20px;
+          font-size: 18px;
+      }
+      .score {
+          margin: 5px 0;
+      }
+  </style>
   </head>
   <body>
-    <div>
+    <h1>Rock Paper Scissors</h1>
+    <button class="rps-button" id="rock">Rock</button>
+    <button class="rps-button" id="paper">Paper</button>
+    <button class="rps-button" id="scissors">Scissors</button>
+    <div class="score-container">
+      <div class="score" id="human-score">Human Score: 0</div>
+      <div class="score" id="computer-score">Computer Score: 0</div>
     </div>
+    
+    <div>
+      <p>Result: <span id="result">Make your move!</span></p>
+    </div>
+
     <script src="rps.js" type="text/javascript"></script>
   </body>
 </html>

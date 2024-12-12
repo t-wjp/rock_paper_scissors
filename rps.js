@@ -1,4 +1,7 @@
 
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     let max = 4;
     let min = 1
@@ -14,19 +17,19 @@ function getComputerChoice() {
 }
 
 
-function getHumanChoice() {
-    let error_flag = 0;
-    let choice = "";
-    while (error_flag != 1) {  
-        if (choice == "rock" || choice == "paper" || choice == "scissors") {
-            error_flag = 1;
-        }
-        else {
-            choice = prompt("What is your selection?").toLowerCase();
-        }
-    }
-    return choice;
-}
+// function getHumanChoice() {
+//     let error_flag = 0;
+//     let choice = "";
+//     while (error_flag != 1) {  
+//         if (choice == "rock" || choice == "paper" || choice == "scissors") {
+//             error_flag = 1;
+//         }
+//         else {
+//             choice = prompt("What is your selection?").toLowerCase();
+//         }
+//     }
+//     return choice;
+// }
 
 function playRound(humanChoice, computerChoice) {
     while (true) {  
@@ -69,4 +72,21 @@ function playGame() {
     }
 }
 
-playGame()
+function updateScores() {
+    document.getElementById('human-score').textContent = `Human Score: ${humanScore}`;
+    document.getElementById('computer-score').textContent = `Computer Score: ${computerScore}`;
+}
+
+const resultDiv = document.getElementById('result');
+
+document.getElementById('rock').addEventListener('click', () => {
+    playRound('rock', getComputerChoice());
+});
+
+document.getElementById('paper').addEventListener('click', () => {
+    playRound('paper', getComputerChoice());
+});
+
+document.getElementById('scissors').addEventListener('click', () => {
+    playRound('scissors', getComputerChoice());
+});
