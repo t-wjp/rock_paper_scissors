@@ -1,0 +1,27 @@
+/* styles.css */
+.rps-button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.score-container {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.score {
+  margin: 5px 0;
+}
+
+#round-count {
+  margin: 5px 0;
+}
+
+#result {
+  margin: 5px 0;
+  margin-top: 20px;
+  font-size: 18px;
+}
+  
